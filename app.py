@@ -42,7 +42,7 @@ def posts_detail(id):
     return render_template('posts_detail.html', article=article)
 
 @app.route('/posts/<int:id>/del')
-def post_delete(id):
+def posts_delete(id):
     article = Article.query.get_or_404(id)
 
     try:
